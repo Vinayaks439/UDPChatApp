@@ -60,10 +60,6 @@ def ServerCode():
 
             print(f" This is from the clients : {str(clientsoc_addr)+clientsoc_data}")
 
-            if len(clients) > n:
-            	print("Too many clients exiting")
-            	sys.exit(1)
-
             for x in clients:
                 if x!=clientsoc_addr:
                     server_socket.sendto(clientsoc_data.encode('utf-8'),x)
